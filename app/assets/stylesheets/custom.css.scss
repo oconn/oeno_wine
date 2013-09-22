@@ -1,0 +1,83 @@
+@import "bootstrap";
+body { padding-top: 60px; }
+@import "bootstrap-responsive";
+
+/* mixins, variables, etc. */
+
+$red: #ae070a;
+$darkRed: #710203;
+
+
+/* topography */
+
+h1 {
+	color: gray;
+	font-family: "Arial Black", Gadget, sans-serif;
+	text-align: center;
+	text-shadow: 1px 1px 2px #000;
+}
+h2 {
+
+}
+h3 {
+
+}
+h4 {
+
+}
+h5 {
+
+}
+h6 {
+
+}
+p {
+	text-indent: 1.5em;
+}
+p + p {
+  text-indent: 1.5em;
+}
+.navbar > ul > li > a {
+	padding: 1em auto;
+}
+
+.navbar .brand {
+	color: $red;
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-weight: bold;
+	&:hover {
+		color: $darkRed;
+	}
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 400px) {
+  h1 {
+  	font-size: 2em;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+  h1 {
+  	font-size: 2em;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

@@ -1,0 +1,81 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* mixins, variables, etc. */
+
+$red: #ae070a;
+$darkRed: #710203;
+
+/* ******** Home *********** */
+img.logo {
+	width: 40%;
+	display: block;
+	margin: 0 auto;
+}
+img.banner {
+  width: 75%;
+  max-width:700px;
+  margin: 0 auto;
+  display: table;
+	img {
+		display: inline-table;
+		margin: 0;
+		padding: 0;
+	}
+}
+h1 { margin: 0.2em auto 1em auto;}
+div.left {
+
+}
+div.right {
+	h2 {
+		text-shadow: 0px 1px 1px gray;
+		color: $red;
+	  font-family: "Arial Black", Gadget, sans-serif;
+	  text-align: center;
+	}
+}
+div.quote {
+	margin: 2em auto;
+	p {
+		font-style: italic;
+	}
+	p#author {
+		font-weight: bolder;
+		font-style: none;
+		text-align: right;
+
+	}
+}
+
+@media (max-width: 400px) {
+  img.logo {width: 75%;}
+  img.banner{width: 85%;}
+  div.left {
+    text-align: center;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 767px) {
+  img.logo {width: 75%;}
+  img.banner{width: 85%;}
+  div.left {
+    text-align: center;
+  }
+  div.right {
+ 
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

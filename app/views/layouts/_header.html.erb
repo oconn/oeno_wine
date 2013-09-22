@@ -1,0 +1,29 @@
+<header class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+      <%= link_to "oeno winemaking", root_path, :class => "brand", :id => "logo" %>
+      <div class="nav-collapse collapse">
+        <nav>
+          <ul class="nav pull-left">
+            <li class="<%='active' if current_page?(about_path) %>"><%= link_to 'About', about_path %></li>
+            <li class="<%='active' if current_page?(how_its_done_path) %>"><%= link_to "How it's done", how_its_done_path %></li>
+            <li class="<%='active' if current_page?(price_guide_path) %>"><%= link_to 'Price Guide', price_guide_path %></li>
+            <li class="<%='active' if current_page?(weddings_path) %>"><%= link_to 'Weddings', weddings_path %></li>
+            <li class="<%='active' if current_page?(news_path) %>"><%= link_to 'News', news_path %></li>
+            <li class="<%='active' if current_page?(faq_path) %>"><%= link_to "FAQ's", faq_path %></li>
+            <li class="<%='active' if current_page?(labels_path) %>"><%= link_to "Labels", labels_path %></li>
+            <li class="<%='active' if current_page?(contact_path) %>"><%= link_to "Contact", contact_path %></li>
+          <ul>
+        </nav>
+      </div><!-- end .nav-collapse -->
+
+    </div><!-- end .container -->
+  </div><!-- end .navbar-inner -->
+</header>
