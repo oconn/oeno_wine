@@ -1,0 +1,29 @@
+LOG:  database system was shut down at 2013-09-20 06:58:30 HST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "oeno_test" does not exist
+FATAL:  database "oeno_test" does not exist
+FATAL:  database "oeno_dev" does not exist
+FATAL:  database "oeno_dev" does not exist
+FATAL:  database "oeno_test" does not exist
+FATAL:  database "oeno_test" does not exist
+FATAL:  database "oeno" does not exist
+FATAL:  database "oeno" does not exist
+FATAL:  database "oeno" does not exist
+FATAL:  database "oeno" does not exist
+FATAL:  lock file "postmaster.pid" already exists
+HINT:  Is another postmaster (PID 57954) running in data directory "/usr/local/var/postgres"?
+ERROR:  role "oeno" already exists
+STATEMENT:  create role oeno login createdb;
+ERROR:  syntax error at or near "createdb" at character 1
+STATEMENT:  createdb oeno
+	create role oeno login createdb;
+ERROR:  role "oeno" already exists
+STATEMENT:  create role oeno login createdb;
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2013-09-21 17:36:31 HST
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
