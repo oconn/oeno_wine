@@ -1,18 +1,23 @@
-<%= image_tag "oeno_logo.png", class: "logo" %>
-<%= image_tag "banner.png", class: "banner" %>
-<h1>taste. create. enjoy.</h1>
 <div class="row">
-  <div class="span2 left">
-    <h2>Phone</h2>
-    <h4>(808) 263-6366</h4>
-    <h2>Hours</h2>
-    <h4>Wednesday - Sunday:</h4>
-    <h4>11am - 8pm</h4>
-    <h4>Closed Monday & Tuesday</h4>
-    <h3>OENO Happy Hour!</h3>
-    <h4>Wednesday - Friday: 11am - 3pm</h4>
-  </div>
+  <aside class="span2">
+    <section>
+      <h3>Phone</h3>
+      <h4>(808) 263-6366</h4>
+      <hr />
+      <h3>Hours</h3>
+      <h4>Wednesday - Sunday:</h4>
+      <h4>11am - 8pm</h4>
+      <h4>Closed Monday & Tuesday</h4>
+      <hr />
+      <h4>OENO Happy Hour!</h4>
+      <h4>Wednesday - Friday:</h4>
+      <h4>11am - 3pm</h4>
+  </section>
+  </aside>
   <div class="span10 right">
+    <%= image_tag "oeno_logo.png", class: "logo" %>
+    <%= image_tag "banner.png", class: "banner" %>
+    <h1>taste. create. enjoy.</h1>
     <h2>Now Available!</h2>
     <h2>Oeno Handcrafted Beermaking</h2>
     <p>
@@ -35,9 +40,11 @@
 
   </div>
 </div>
-<div class="row quote">
-  <div class="span6 offset3">
-    <p>
+<div class="row">
+  <div class="span2">
+  </div>
+  <div class="span6 offset2">
+    <p class="quote">
       "Wine is one of the most civilized things in the world and one 
       of the most natural things of the world that has been brought to 
       the greatest perfection, and it offers a greater range for 
@@ -48,5 +55,16 @@
       ~Ernest Hemingway</br>
       Death in the Afternoon
     </p>
+  </div>
+</div>
+<div class="row">
+  <div class="span6 offset3">
+    <div class="address">
+      <p>26 Hoolai St. STE. 900</br>
+        Kailua, HI  96734</br>
+        info@oenowinemaking.com
+      </p>
+    </div>
+
   </div>
 </div>

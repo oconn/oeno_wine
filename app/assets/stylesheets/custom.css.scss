@@ -6,10 +6,12 @@ body { padding-top: 60px; }
 
 $red: #ae070a;
 $darkRed: #710203;
-
+$gold: #F2F5A9;
 
 /* topography */
+body {
 
+}
 h1 {
 	color: gray;
 	font-family: "Arial Black", Gadget, sans-serif;
@@ -37,26 +39,108 @@ p {
 p + p {
   text-indent: 1.5em;
 }
-.navbar > ul > li > a {
-	padding: 1em auto;
-}
+
+/* Navbar */
 
 .navbar .brand {
-	color: $red;
+	color: $gold;
 	font-family: "Arial Black", Gadget, sans-serif;
-	font-weight: bold;
+	text-shadow: none;
 	&:hover {
-		color: $darkRed;
+		color: white;
 	}
 }
 
+.navbar-inner {
+  background: $red;
+  background-image: linear-gradient(bottom, $darkRed 29%, $red 73%);
+  background-image: -o-linear-gradient(bottom, $darkRed 29%, $red 73%);
+  background-image: -moz-linear-gradient(bottom, $darkRed 29%, $red 73%);
+  background-image: -webkit-linear-gradient(bottom, $darkRed 29%, $red 73%);
+  background-image: -ms-linear-gradient(bottom, $darkRed 29%, $red 73%);
 
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.29, $darkRed),
+    color-stop(0.73, $red));
+}
 
+.navbar .nav > li > a {
+  
+}
 
+.dropdown-menu li > a:hover, 
+.dropdown-menu li > a:focus, 
+.dropdown-submenu:hover > a {
+  background-image: none;
+  background-color: $red;
+}
 
+.navbar .nav > .active > a, 
+.navbar .nav > .active > a:hover, 
+.navbar .nav > .active > a:focus {
+  background-color: $gold;
+  text-shadow: 0px 1px 0px #555;
+  color: $red;
+}
+.nav-collapse .nav > li > a,
+ .nav-collapse .dropdown-menu a {
+  color: white;
+  text-shadow: none;
+  &:hover {
+    text-shadow: none;
+    background-color: $gold;
+    color: $red;
+  }
+}
+.nav-collapse .dropdown-menu a:hover {
+  color: $red;
+}
 
+.navbar .nav li.dropdown.open > .dropdown-toggle, 
+.navbar .nav li.dropdown.active > .dropdown-toggle, 
+.navbar .nav li.dropdown.open.active > .dropdown-toggle {
+  background: $red;
+  text-shadow: none;
+  color: $red;
+}
 
+.dropdown-menu {
+  background: $red;
+  background-image: linear-gradient(bottom, $darkRed 29%, $red 73%);
+  background-image: -o-linear-gradient(bottom, $darkRed 29%, $red 73%);
+  background-image: -moz-linear-gradient(bottom, $darkRed 29%, $red 73%);
+  background-image: -webkit-linear-gradient(bottom, $darkRed 29%, $red 73%);
+  background-image: -ms-linear-gradient(bottom, $darkRed 29%, $red 73%);
 
+  background-image: -webkit-gradient(
+    linear,
+    left bottom,
+    left top,
+    color-stop(0.29, $darkRed),
+    color-stop(0.73, $red));
+}
+
+.dropdown-menu > li > a {
+  color: $red;
+}
+
+.dropdown-menu .divider {
+background-color: $red;
+border-bottom: 1px solid $red;
+}
+
+.navbar .nav li.dropdown > .dropdown-toggle .caret {
+border-top-color: black;
+border-bottom-color: black;
+}
+.nav-collapse .dropdown-menu a {
+  &:hover {
+    color: black;
+  }
+}
 
 @media (max-width: 400px) {
   h1 {
