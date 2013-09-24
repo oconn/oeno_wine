@@ -34,3 +34,6 @@ LOG:  database system is shut down
 LOG:  database system was shut down at 2013-09-21 17:57:01 HST
 LOG:  database system is ready to accept connections
 LOG:  autovacuum launcher started
+LOG:  database system was shut down at 2013-09-22 20:48:27 HST
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections

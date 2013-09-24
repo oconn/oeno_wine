@@ -19,10 +19,13 @@ h1 {
 	text-shadow: 1px 1px 2px #000;
 }
 h2 {
-
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-align: center;
+  text-shadow: 1px 1px 2px gray;
 }
 h3 {
-
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-shadow: 1px 1px 2px gray;
 }
 h4 {
 
@@ -33,11 +36,66 @@ h5 {
 h6 {
 
 }
+ul.site_ul {
+  margin: 1em auto;
+  li {
+    margin: 0.5em auto;
+    font-size: 2em;
+    font-family: "Arial Black", Gadget, sans-serif;
+    color: $red;
+    list-style: none;
+    p {
+      font-size: 1em;
+    }
+  }
+}
+ul.site_ul2 {
+  list-style-image: url('glass3.png');
+  li {
+    line-height:1em;
+    margin: 1.4em auto;
+  }
+}
+div.price_list {
+  div {
+    i {
+      color: $red;
+      font-weight: bold;
+    }
+    h2.comming_soon {
+      font-size: 2em;
+      color: $gold;
+      text-shadow: 1px 1px 1px black;
+    }
+    h3 {
+      font-size: 1.4em;
+      text-align: center;
+      line-height: 1em;
+      margin: 0.8em auto;
+      text-shadow: none;
+    }
+    ul {
+      width: 85%;
+      margin: 0 auto;
+      li {
+        margin: 0.5em auto;
+      }
+    }
+  }
+}
 p {
 	text-indent: 1.5em;
 }
 p + p {
   text-indent: 1.5em;
+}
+hr {
+  background-color: $red;
+  height: 5px;
+}
+hr.hr2 {
+  background-color: black;
+  height: 2px;
 }
 
 /* Navbar */
@@ -141,6 +199,31 @@ border-bottom-color: black;
     color: black;
   }
 }
+
+/* *** Footer *** */
+
+p.quote {
+  margin: 2em auto;
+  font-style: italic;
+}
+p.author {
+  font-weight: bolder;
+  font-style: none;
+  text-align: right;
+}
+
+div.address {
+  display: table;
+  margin: 0 auto;
+  p {
+    text-indent: 0;
+    text-align: center;
+  }
+  p.qoute {
+  }
+}
+
+/* Media Queries */
 
 @media (max-width: 400px) {
   h1 {
