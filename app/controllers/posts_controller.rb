@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_filter :verify_is_admin, only: [:new, :create, :edit, :update, :destroy]
+
 	def new
 		@post = Post.new
 	end
@@ -43,7 +45,14 @@ class PostsController < ApplicationController
   end
  
   private
+
     def post_params
       params.require(:post).permit(:title, :text)
+    end
+    
+    # Before filter(s)
+
+    def verify_is_admin
+      (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
     end
 end

@@ -14,9 +14,11 @@
     <div class="show_edit_del_ul">
       <ul>
         <li><%= link_to 'Show More', post_path(post), :class => "btn btn-lo" %></li>
-        <li><%= link_to 'Edit', edit_post_path(post), :class => "btn" %></li>
-        <li><%= link_to 'Delete Post', post_path(post),
+        <% if current_user && current_user.admin? %>
+          <li><%= link_to 'Edit', edit_post_path(post), :class => "btn" %></li>
+          <li><%= link_to 'Delete Post', post_path(post),
                              method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></li>
+        <% end %>
       </ul>
     </div> 
   <% end %>

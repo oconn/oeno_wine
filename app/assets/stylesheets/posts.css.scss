@@ -14,6 +14,8 @@ $darkRed: #710203;
 $gold: #F2F5A9;
 
 h1.blog_title {
+	color: #000;
+	text-shadow: none;
 	margin: .4em auto .6em auto;
 	padding: 0.2em;
 	white-space:nowrap;	
@@ -29,4 +31,94 @@ h2.post_title {
 h3.post_time {
 	font-size: 1.4em;
 	text-align: center;
+}
+
+/* *** Markdown *** */
+
+div.markdown {
+	p {
+	  line-height: 1.4em;
+	  text-indent: 1.5em;
+	  margin: .8em .8em;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		text-align: left;
+    color: #000;
+    text-shadow: none;
+	}
+	h1 {
+		font-size: 2.4em;
+	}
+	h2 {
+		font-size: 2.2em;
+		font-weight: bold;
+	}
+	h3 {
+		font-size: 2em;
+	}
+	h4 {
+		font-size: 1.6em;
+	}
+	h5 {
+		font-size: 1.3em;
+	}
+	h6 {
+		font-size: 1em;
+	}
+	a {
+		font-weight: lighter;
+		font-size: 1.1em;
+	}
+	blockquote {
+  background: $red;
+  border-left: 10px solid $darkRed;
+  margin: 1em auto;
+  padding: 0.4em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  border-radius: 1em;
+  width:75%;
+
+    p {
+    	color: white;
+    	font-size: 1.2em;
+    	line-height: 1em;
+    	padding: 0;
+    	margin: 0;
+    }
+  }
+  blockquote:before {
+    color: white;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote:after {
+    color: white;
+    content: close-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-left: 95%;
+    vertical-align: -0.4em;
+  }
+  hr {
+  	background-color: $red;
+  	height: 5px;
+  	border-radius: 2em;
+  }
+}
+
+div.markdown p + div.markdown p {
+  text-indent: 1.5em;
+}
+h2.comment_title {
+	margin: 2em auto 1em auto;
+}
+div.pagination {
+	
+	ul {
+		display:table;
+		margin: 0 auto;
+	}
 }

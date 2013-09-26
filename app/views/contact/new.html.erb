@@ -1,0 +1,45 @@
+<% provide(:title, "Contact") %>
+<h2>Let's get in touch</h2>
+<p id="contact-inst">Leave a short message and we'll get back to you soon.</p>
+<div class="row">
+  <div class="span6 offset3">
+    <div class="form-wrap">
+      <%= form_for @message, :url => new_contact_path do |f| %>
+        <% if @message.errors.any? %>
+          <div id="error_explanation">
+            <div class="alert alert-error">
+              The form contains <%= pluralize(@message.errors.count, "error") %>.
+            </div>
+            <ul>
+              <% @message.errors.full_messages.each do |msg| %>
+                <li>* <%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+        <div class="field">
+          <%= f.label :name %>
+          <%= f.text_field :name %>
+        </div>
+
+        <div class="field" style="display: none;">
+          <%= f.label :nickname %>
+          <%= f.text_field :nickname %>
+        </div>
+    
+        <div class="field">
+          <%= f.label :email %>
+          <%= f.text_field :email %>
+        </div>
+
+        <div class="field">
+          <%= f.label :body, "Message" %>
+          <%= f.text_area :body, rows: "8" %>
+        </div>   
+
+        <%= f.submit "Send", class: "btn btn-primary" %>
+       
+      <% end %>
+    </div>
+  </div>
+</div>

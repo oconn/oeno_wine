@@ -3,16 +3,16 @@ Oeno::Application.routes.draw do
   
   resources :posts
 
+  resources :contact, :only => [:new, :create]
+
   root 'static_pages#home'
 
   match '/about',  to: 'static_pages#about',  via: 'get'
   match '/how_its_done',  to: 'static_pages#how',  via: 'get'
   match '/price_guide',  to: 'static_pages#price',  via: 'get'
   match '/weddings',  to: 'static_pages#weddings',  via: 'get'
-  match '/news',  to: 'static_pages#news',  via: 'get'
   match '/faq',  to: 'static_pages#faq',  via: 'get'
   match '/labels',  to: 'static_pages#labels',  via: 'get'
-  match '/contact',  to: 'static_pages#contact',  via: 'get'
 
 
 
