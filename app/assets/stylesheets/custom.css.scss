@@ -3,6 +3,11 @@ body { padding-top: 60px; }
 @import "bootstrap-responsive";
 
 /* mixins, variables, etc. */
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 $red: #ae070a;
 $darkRed: #710203;
@@ -54,65 +59,6 @@ ul.site_ul2 {
   li {
     line-height:1em;
     margin: 1.4em auto;
-  }
-}
-div.price_list {
-  div {
-    i {
-      color: $red;
-      font-weight: bold;
-    }
-    h2.comming_soon {
-      font-size: 2em;
-      color: $gold;
-      text-shadow: 1px 1px 1px black;
-    }
-    h3 {
-      font-size: 1.4em;
-      text-align: center;
-      line-height: 1em;
-      margin: 0.8em auto;
-      text-shadow: none;
-    }
-    ul {
-      width: 85%;
-      margin: 0 auto;
-      li {
-        margin: 0.5em auto;
-      }
-    }
-  }
-}
-div.married {
-  div {
-    h1 {
-      color: #000;
-      text-shadow: none;
-    }
-    h2 {
-      text-shadow: none;
-    }
-    h3 {
-      text-shadow: none;
-      text-align: center;
-      color: gray;
-    }
-    img {
-      margin: 0 auto;
-      display: block;
-      padding: 0.5em 0.5em 1.4em 0.5em;
-      background-color: #fff;
-      -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
-      -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
-      box-shadow: 0px 0px 10px rgba(0,0,0,.8);
-    }
-  }
-}
-div.faq {
-  div {
-    h4 {
-      color: $red;
-    }
   }
 }
 p {
@@ -192,7 +138,7 @@ hr.hr2 {
 .navbar .nav li.dropdown.open > .dropdown-toggle, 
 .navbar .nav li.dropdown.active > .dropdown-toggle, 
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background: $red;
+  background: $gold;
   text-shadow: none;
   color: $red;
 }
@@ -253,6 +199,55 @@ div.address {
   }
   p.qoute {
   }
+}
+
+/* *** Flash messages *** */
+
+.notice {
+color: white;
+padding: 8px 35px 8px 14px;
+margin-bottom: 20px;
+text-shadow: 0 1px 0 gray; 
+background-color: #74B976;
+border: 1px solid #2B862E;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+/* *** Forms *** */
+
+form {
+  background-color: white;
+  padding: 20px;
+}
+
+div.form-wrap {
+  padding: 1em;
+  margin: 1em auto;
+  background-color: $red;
+  -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+  h2 {
+    color: white;
+  }
+}
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+label {
+  font-family: "Century Gothic", sans-serif;
+  font-size: 1.4em;
+}
+input {
+  height: auto !important;
 }
 
 /* Media Queries */
