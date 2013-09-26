@@ -1,0 +1,24 @@
+<% provide(:title, "News") %>
+<h1 class="blog_title">Oeno Winemaking</h1>
+  <% @posts.each do |post| %>
+    <h2 class="post_title"><%= post.title %></h2>
+    <h3 class="post_time"><%= post.created_at.strftime("%B %d, %Y") %></h3>
+    <div class="row">
+      <div class="span8 offset2">
+        <div class="markdown">
+          <%= markdown(post.text) %>
+        </div>
+      </div>
+    </div>
+
+    <div class="show_edit_del_ul">
+      <ul>
+        <li><%= link_to 'Show More', post_path(post), :class => "btn btn-lo" %></li>
+        <li><%= link_to 'Edit', edit_post_path(post), :class => "btn" %></li>
+        <li><%= link_to 'Delete Post', post_path(post),
+                             method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></li>
+      </ul>
+    </div> 
+  <% end %>
+
+  <%#= will_paginate @posts %>

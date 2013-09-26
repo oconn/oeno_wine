@@ -1,0 +1,32 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* mixins, variables, etc. */
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+$red: #ae070a;
+$darkRed: #710203;
+$gold: #F2F5A9;
+
+h1.blog_title {
+	margin: .4em auto .6em auto;
+	padding: 0.2em;
+	white-space:nowrap;	
+	overflow: hidden;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+h2.post_title {
+	font-size: 2.4em;
+	color: $darkRed;
+	text-shadow: 0px 1px 1px #555;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+h3.post_time {
+	font-size: 1.4em;
+	text-align: center;
+}

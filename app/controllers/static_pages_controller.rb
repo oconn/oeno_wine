@@ -14,9 +14,6 @@ class StaticPagesController < ApplicationController
   def weddings
   end
 
-  def news
-  end
-
   def faq
   end
 

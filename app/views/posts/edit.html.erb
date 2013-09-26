@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="span8 offset2">
+    <div class="form-wrap">      
+      <h2>Edit post</h2>
+       
+      <%= form_for :post, url: post_path(@post.id),
+      method: :patch do |f| %>
+        <% if @post.errors.any? %>
+        <div id="errorExplanation">
+          <h2><%= pluralize(@post.errors.count, "error") %> prohibited
+            this post from being saved:</h2>
+          <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+        <% end %>
+        <p>
+          <%= f.label :title %>
+          <%= f.text_field :title %>
+        </p><br>
+       
+        <p>
+          <%= f.label :text %>
+          <%= f.text_area :text, :rows => "16" %>
+        </p><br>
+       
+        <p>
+          <%= f.submit "Edit", class: "btn btn-primary" %>
+        </p>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= link_to 'Back', posts_path %>

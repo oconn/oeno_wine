@@ -250,6 +250,32 @@ input {
   height: auto !important;
 }
 
+/* show edit delete */
+
+div.show_edit_del_ul {
+  display: block;
+  width: 100%;
+  margin: 0;
+  ul {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0.4em;
+    text-align: center;
+    white-space: nowrap;
+    li {
+      text-decoration: none;
+      list-style: none;
+      margin: 0.4em auto;
+      a {
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
 /* Media Queries */
 
 @media (max-width: 400px) {
